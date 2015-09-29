@@ -9,7 +9,8 @@ public class Socio extends Persona{
         super(nif, nombre, fecha_nac);
         this.ID = id;
         this.fecha_in = ing;
-    }       
+    }
+    
 
     public int getID() {
         return ID;

@@ -5,13 +5,16 @@
  */
 package source;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Sergio
  */
 public class Dashboard extends javax.swing.JFrame {
 
-    Asociacion a = new Asociacion ();
+    Asociacion aso = new Asociacion ();
+    
     /**
      * Creates new form DashBoard
      */
@@ -61,7 +64,23 @@ public class Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
+    // TODO add your handling code here:
+    //void crear_socio(Fecha fecha_ini, NIF nif, Nombre nombre, Fecha fecha_nac)
+
+    String nif = JOptionPane.showInputDialog(null, "DNI: ", "Crear Socio", 3);
+    String Nom = JOptionPane.showInputDialog(null, "Nombre: ", "Crear Socio", 3);
+    String Ape = JOptionPane.showInputDialog(null, "Apellido: ", "Crear Socio", 3);
+    String Nac = JOptionPane.showInputDialog(null, "Fecha Nacimiento: ", "Crear Socio", 3);
+    String Ing = JOptionPane.showInputDialog(null, "Fecha Ingreso: ", "Crear Socio", 3);
+    
+    NIF n = new NIF (nif);
+    Nombre nom = new Nombre (Nom,Ape);
+    Fecha nac = new Fecha (Nac);
+    Fecha ing = new Fecha (Ing);
+    
+    aso.crear_socio(ing, n, nom, nac);
+    
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
