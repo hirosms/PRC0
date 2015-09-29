@@ -54,5 +54,9 @@ public class Fecha {
     {
         System.out.println(d+"/"+m+"/"+a);
     }
-	
+
+            public String to_s ()
+    {
+        return d+"/"+m+"/"+a;
+    }
 }

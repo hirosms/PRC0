@@ -37,4 +37,9 @@ public class Nombre {
     {
         System.out.println(nombre+" "+apellido);
     }
+
+        public String to_s ()
+    {
+        return nombre+" "+apellido;
+    }
 }

@@ -43,4 +43,9 @@ public class NIF {
     {      
         System.out.println(dni+letra);
     }
+
+    public String to_s ()
+    {
+        return dni+letra;
+    }
 }
